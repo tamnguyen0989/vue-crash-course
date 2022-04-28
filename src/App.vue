@@ -71,21 +71,27 @@
         </div>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
-import UserList from '@/components/UserList'
-import AuthUser from '@/components/AuthUser'
-import Register from '@/components/Register'
-import Greeting from '@/components/Greeting'
+import UserList from "@/components/UserList";
+import AuthUser from "@/components/AuthUser";
+import Register from "@/components/Register";
+import Greeting from "@/components/Greeting";
 import Counter from "@/components/Counter";
 import Employee from "@/components/Employee";
 import Customer from "@/components/Customer";
 export default {
-  components: { Customer, Employee, Counter, Greeting, Register, AuthUser, UserList },
+  components: {
+    Customer,
+    Employee,
+    Counter,
+    Greeting,
+    Register,
+    AuthUser,
+    UserList,
+  },
 };
 </script>
 

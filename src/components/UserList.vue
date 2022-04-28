@@ -48,9 +48,22 @@ export default {
   data: function () {
     return {
       // users: USERS
-      users: UserService.getUsers(),
+      users: [],
+      loading: false,
+      errorMsg: null,
     };
   },
+  created: async function() {
+    try {
+      this.loading = true
+      let res = await UserService.getUsers()
+      const {data} = res
+      this.users = data
+      this.loading = false
+    } catch (error) {
+      this.loading = false
+    }
+  }
 };
 </script>
 
